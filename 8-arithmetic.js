@@ -1,14 +1,10 @@
 function arithmetic(a, b, operator) {
   //your code here!
-  if (operator == "add") {
-    return a + b;
-  }
-  if (operator == "subtract") {
-    return a - b;
-  }
-  if (operator == "multiply") {
-    return a * b;
-  } else {
-    return a / b;
-  }
+  const operation = {
+    add: a + b,
+    subtract: a - b,
+    multiply: a * b,
+    divide: a / b,
+  };
+  return operation[operator];
 }
