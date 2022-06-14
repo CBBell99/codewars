@@ -1,5 +1,5 @@
 function replace(s) {
-  return s.replace(/[aeiouAEIOU]/g, "!");
+  return s.replace(/[aeiou]/gi, "!");
 }
 
 console.log(replace("Hi!"));
