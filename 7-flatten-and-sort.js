@@ -1,5 +1,5 @@
 function flattenAndSort(array) {
-  return array.flat().sort((a, b) => a - b);
+  return [].concat(...array).sort((a, b) => a - b);
 }
 
 console.log(
