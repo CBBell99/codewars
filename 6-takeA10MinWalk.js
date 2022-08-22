@@ -1,18 +1,16 @@
 function isValidWalk(walk) {
-  if (walk.length !== 10) return false;
+  const north = walk.filter((item) => {
+    return item === "n";
+  }).length;
+  const south = walk.filter((item) => {
+    return item === "s";
+  }).length;
+  const east = walk.filter((item) => {
+    return item === "e";
+  }).length;
+  const west = walk.filter((item) => {
+    return item === "w";
+  }).length;
 
-  let north = 0;
-  let south = 0;
-  let east = 0;
-  let west = 0;
-
-  for (i = 0; i < walk.length; i++) {
-    if (walk[i] == "n") north++;
-    else if (walk[i] == "s") south++;
-    else if (walk[i] == "e") east++;
-    else if (walk[i] == "w") west++;
-  }
-
-  if (north == south && west == east) return true;
-  return false;
+  return walk.length === 10 && north === south && east === west;
 }
