@@ -1,12 +1,9 @@
 function uefaEuro2016(teams, scores) {
-  var teamA = teams[0];
-  var teamB = teams[1];
+  const [team1, team2] = teams;
+  const [score1, score2] = scores;
+  const winner = score1 > score2 ? team1 : team2;
 
-  if (scores[0] > scores[1]) {
-    return "At match " + teamA + " - " + teamB + ", " + teamA + " won!";
-  } else if (scores[0] < scores[1]) {
-    return "At match " + teamA + " - " + teamB + ", " + teamB + " won!";
-  } else if (scores[0] === scores[1]) {
-    return "At match " + teamA + " - " + teamB + ", teams played draw.";
-  }
+  return score1 === score2
+    ? `At match ${team1} - ${team2}, teams played draw.`
+    : `At match ${team1} - ${team2}, ${winner} won!`;
 }
