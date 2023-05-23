@@ -9,3 +9,4 @@ function capitalize(s) {
     .join("");
   return [even, odd];
 }
+ 
